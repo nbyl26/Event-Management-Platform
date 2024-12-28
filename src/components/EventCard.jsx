@@ -17,11 +17,16 @@ const EventCard = ({ event }) => {
     const formattedDate = new Date(event.date.seconds * 1000).toLocaleDateString();
 
     return (
-        <div className="bg-white border rounded-lg shadow-lg hover:scale-105 transform transition duration-500 group">
-            <div className="p-6">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 group hover:scale-105">
+            {/* Header event */}
+            <div className="bg-primary text-white p-6 rounded-t-lg">
                 {/* Nama event */}
-                <h3 className="text-2xl font-semibold text-primary mb-2">{event.name}</h3>
+                <h3 className="text-2xl font-semibold mb-2 hover:text-primary-dark transition-colors">
+                    {event.name}
+                </h3>
+            </div>
 
+            <div className="p-6">
                 {/* Deskripsi event */}
                 <p className="text-sm text-gray-600 mb-4">{event.description}</p>
 
