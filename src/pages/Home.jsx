@@ -1,13 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+// src/pages/Home.jsx
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-500 h-screen flex flex-col justify-center items-center text-white text-center">
-      <h1 className="text-5xl font-poppins mb-4">Welcome to GDG Campus!</h1>
-      <p className="text-xl mb-8">Join us for exciting events and networking opportunities in the tech community.</p>
-      <Link to="/events" className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-all">
-        View Upcoming Events
+    <div className="text-center mt-20">
+      <h1 className="text-5xl font-bold text-primary">Welcome to GDG Event Platform</h1>
+      <p className="mt-4 text-xl text-gray-600">Organize and manage events effortlessly</p>
+      <Link
+        to="/events"
+        className="mt-6 inline-block bg-accent text-white py-3 px-6 rounded-lg hover:bg-primary transition duration-300"
+      >
+        View Events
       </Link>
     </div>
   );
